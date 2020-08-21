@@ -8,6 +8,10 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+button {
+    font-family: 'Quicksand', sans-serif;
+}
+
 header {
     display: flex;
     width: 90%;
@@ -52,4 +56,81 @@ nav {
 
 .socmed-links img {
     margin: 5px;
+}
+
+/* Carousel Section */
+
+.carousel-container img{
+    width: 380px;
+}
+
+.carousel-container {
+    width: 350px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.carousel-slide {
+    display: flex;
+    
+}
+
+.presentation {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+
+.introduction {
+    flex: 1;
+}
+
+.intro-text {
+    font-size: 30px;
+    font-weight: 500;
+    background: linear-gradient(to right, #17202A, #78909C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text p {
+    margin-top: 5px;
+    font-size: 20px;
+    color: #78909C;
+}
+
+.cta {
+    padding: 40px 0px 0px 0px
+}
+
+.cta-gallery {
+    border: 2px solid #78909C;
+    background: transparent;
+    color: #78909C;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cta-book {
+    border: none;
+    background: #17202A;
+    color: white;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0px 0px 0px 20px;
+}
+
+.cover {
+    flex: 1;
+}
+
+.cover img {
+    height: 60vh;
 }
