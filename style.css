@@ -106,14 +106,14 @@ nav {
     height: 50px;
     cursor: pointer;
     font-size: 16px;
-    margin: 0px 0px 0px 20px;
+    margin: 20px 0px 0px 20px;
 }
 
 .slide-container {
     margin: 0 auto;
     flex: 1.5;
     position: relative;
-    width: 80%;
+    width: auto;
     height: 100%;
     overflow: hidden;
 }
@@ -152,4 +152,55 @@ nav {
 
 #next-btn:focus, #prev-btn:focus {
     outline: none;
+}
+
+.gallery {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+    background: #EAECEE;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        font-size: 10px;
+    }
+    .nav-link {
+        font-size: 8px;
+    }
+    .socmed-links img{
+        height: 24px;
+    }
+    .presentation {
+        flex-direction: column;
+        align-items: center;
+    }
+    .introduction {
+        margin-top: 2vh;
+        text-align: center;
+        align-items: center;
+        height: 20vh;
+    }
+    .intro-text h1 {
+        font-size: 25px;
+    }
+    .intro-text p {
+        font-size: 20px;
+    }
+    .cta {
+        padding: 30px 0px 0px 0px;
+        align-items: center;
+    }
+    .slide-container {
+        flex: 1;
+        height: 100%;
+        align-items: center;
+        padding: none;
+    }
+    .slides {
+        height: 80%;
+        padding-top: 30px;
+    }
 }
