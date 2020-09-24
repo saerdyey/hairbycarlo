@@ -1,206 +1,626 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 button {
-    font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 header {
-    display: flex;
-    width: 90%;
-    height: 10vh;
-    margin: auto;
-    align-items: center;
+  border-bottom: 1px solid #818f96;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  align-items: center;
+  padding: 0px 60px 0px 60px;
 }
 
-.logo-container, .nav-links, .socmed-links {
-    display: flex;
-}
-
-.logo-container {
-    flex: 1;
+.logo-container,
+.nav-links,
+.socmed-links,
+.burger {
+  display: flex;
 }
 
 .logo {
-    font-weight: 400;
-    margin: 5px;
-    font-size: 18px;
+  font-weight: 400;
+  margin: 5px;
+  font-size: 18px;
 }
 
 nav {
-    flex: 2;
+  flex: 1;
 }
 
 .nav-links {
-    justify-content: space-around;
-    list-style: none;
+  justify-content: space-around;
+  list-style: none;
 }
 
 .nav-link {
-    color: #5f5f79;
-    font-size: 18px;
-    text-decoration: none;
+  color: #17202a;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .socmed-links {
-    flex: 1;
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 .socmed-links img {
-    margin: 5px;
+  margin: 5px;
 }
 
+.burger {
+  display: none;
+  flex-direction: column;
+}
+
+.burger div {
+  width: 23px;
+  height: 2px;
+  background-color: #17202a;
+  margin: 3px;
+  transition: all 0.3s ease;
+}
+
+/* PRESENTATION */
 .presentation {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    min-height: 80vh;
-    align-items: center;
+  min-height: 80vh;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  padding: 0px 60px 0px 60px;
 }
 
+/* intro */
 .introduction {
-    flex: 1;
+  flex: 1;
 }
 
 .intro-text {
-    font-size: 30px;
-    font-weight: 500;
-    background: linear-gradient(to right, #17202A, #78909C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  font-weight: 500;
+  background: linear-gradient(to right, #17202a, #78909c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .intro-text p {
-    margin-top: 5px;
-    font-size: 20px;
-    color: #78909C;
+  margin-top: 5px;
+  font-size: 20px;
+  color: #78909c;
 }
 
 .cta {
-    padding: 40px 0px 0px 0px
+  padding: 40px 0px 0px 0px;
 }
 
 .cta-gallery {
-    border: 2px solid #78909C;
-    background: transparent;
-    color: #78909C;
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 16px;
+  border: 2px solid #78909c;
+  background: transparent;
+  color: #78909c;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .cta-book {
-    border: none;
-    background: #17202A;
-    color: white;
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px 0px 0px 20px;
+  border: none;
+  background: #17202a;
+  color: white;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px 0px 0px 20px;
 }
 
+/* image slider */
 .slide-container {
-    margin: 0 auto;
-    flex: 1.5;
-    position: relative;
-    width: auto;
-    height: 100%;
-    overflow: hidden;
+  margin: 0 auto;
+  flex: 1.5;
+  position: relative;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 .slides {
-    display: flex;
-    height: 100%;
+  display: flex;
+  height: 100%;
 }
 
 .slide {
-    min-width: 100%;
+  min-width: 100%;
 }
 
 .slide img {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .slide-control {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#next-btn, #prev-btn {
+#next-btn,
+#prev-btn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+#next-btn:focus,
+#prev-btn:focus {
+  outline: none;
+}
+
+/* GALLERY */
+.gallery-section {
+  background: #17202a;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.gallery-text {
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  background: linear-gradient(to right, #17202a, #78909c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.albums {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.albums img {
+  height: 30vh;
+  width: 270px;
+}
+
+.album {
+  margin: 10px;
+}
+
+/*? BOOK SECTION */
+
+.book-section {
+  min-height: 80vh;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  padding: 0px 60px 0px 60px;
+  text-align: center;
+}
+
+.book-section {
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.book-section h1 {
+  background: linear-gradient(to right, #17202a, #78909c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.book_form-section {
+  display: flex;
+}
+
+.input-section {
+  flex: 1;
+  margin: auto;
+}
+
+form input,
+form label,
+form textarea {
+  display: block;
+  font-size: 20px;
+}
+
+form input,
+form textarea {
+  margin: 10px auto;
+  width: 30%;
+  min-width: 90%;
+  border: none;
+  border: 1px solid black;
+}
+
+form input {
+  padding: 1.2px;
+}
+
+.date-input input {
+  width: 30%;
+  min-width: 33%;
+}
+
+.book-message {
+  flex: 1;
+  margin: auto;
+}
+
+.book-text {
+  padding-bottom: 10px;
+}
+
+footer {
+  font-size: 15px;
+  min-height: 10vh;
+  text-align: center;
+  margin: 50px 0px 10px 0px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  header {
+    padding: 0px 30px 0px 30px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+  .nav-link {
+    font-size: 18px;
+  }
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 30px 0px 30px;
+  }
+  .introduction {
+    text-align: center;
+    align-items: center;
+    height: 20vh;
+    padding-top: 5vh;
+  }
+  .intro-text h1 {
+    font-size: 35px;
+  }
+  .slide-container {
+    margin: 2vh 2vh 6vh 2vh;
+  }
+  .intro-text p {
+    font-size: 20px;
+  }
+  .cta {
+    padding: 30px 0px 0px 0px;
+    align-items: center;
+  }
+  .slide-container {
+    flex: 1;
+    height: 100%;
+    align-items: center;
+  }
+  .slides {
+    height: 80%;
+    padding-top: 30px;
+  }
+
+  /*GALLERY ALBUMS*/
+  .gallery-text {
+    padding-top: 15px;
+    padding: 25px;
+  }
+
+  .gallery h1 {
+    font-size: 33px;
+  }
+
+  /* BOOK SECTION */
+  .book-section h1 {
+    font-size: 33px;
+  }
+
+  form input,
+  form textarea {
+    margin: 8px auto;
+  }
+
+  form input,
+  form label,
+  form textarea {
+    font-size: 17px;
+  }
+
+  .date-input input {
+    width: 30%;
+    min-width: 55%;
+  }
+
+  .book-text {
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 15px;
+    min-height: 10vh;
+    margin: 4px 0px 2px 0px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 415px) {
+  header {
+    height: 5vh;
+    padding: 0px 30px 0px 30px;
+  }
+
+  .logo {
+    font-size: 13px;
+  }
+  .nav-link {
+    font-size: 13px;
+  }
+  .socmed-links img {
+    height: 24px;
+  }
+  .presentation {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px 0px 30px;
+  }
+  .introduction {
+    text-align: center;
+    align-items: center;
+  }
+  .intro-text {
+    padding-top: 3vh;
+    margin-top: 3vh;
+  }
+  .intro-text h1 {
+    font-size: 33px;
+  }
+  .intro-text p {
+    font-size: 20px;
+  }
+  .cta {
+    padding: 30px 0px 0px 0px;
+    align-items: center;
+  }
+  .slide-container {
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    padding-top: 3vh;
+  }
+  .slides {
+    height: 80%;
+    padding-top: 30px;
+  }
+
+  /*GALLERY ALBUMS*/
+  .gallery-text {
+    padding-top: 15px;
+    font-size: 25px;
+    padding: 25px;
+  }
+
+  .gallery h1 {
+    font-size: 31px;
+  }
+
+  /* BOOK SECTION */
+  .book-section h1 {
+    font-size: 31px;
+  }
+
+  .book_form-section {
+    flex-direction: column;
+  }
+
+  form input,
+  form textarea {
+    margin: 8px auto;
+  }
+
+  form input,
+  form label,
+  form textarea {
+    font-size: 14px;
+  }
+
+  .date-input input {
+    width: 30%;
+    min-width: 55%;
+  }
+
+  .book-text {
+    padding: 20px 0px 20px 0px;
+    font-size: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 12px;
+    min-height: 6vh;
+    margin: 2px 0px 1px 0px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    background: white;
+    padding: 0px 30px 0px 30px;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+  .nav-links {
+    color: aliceblue;
+    position: fixed;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background: white;
+    border-left: 1px solid #818f96;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
     cursor: pointer;
-    background: transparent;
-    border: none;
-    margin: 0px 20px 0px 10px;
-}
+  }
 
-#next-btn:focus, #prev-btn:focus {
-    outline: none;
-}
+  .nav-active {
+    transform: translateX(0%);
+  }
 
-.gallery {
-    display: flex;
-    width: 100%;
-    margin: auto;
-    min-height: 80vh;
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggleBurger .line1 {
+    transform: rotate(-45deg) translate(-5px, 2px);
+  }
+  .toggleBurger .line2 {
+    opacity: 0;
+  }
+  .toggleBurger .line3 {
+    transform: rotate(45deg) translate(-5px, -2px);
+  }
+
+  .socmed-links img {
+    height: 24px;
+  }
+
+  .presentation {
+    flex-direction: column;
     align-items: center;
-    background: #EAECEE;
-}
+    padding: 0px 30px 0px 30px;
+    padding-top: 8vh;
+  }
+  .introduction {
+    text-align: center;
+    align-items: center;
+  }
+  .intro-text {
+    padding-top: 2vh;
+    margin-top: 2vh;
+  }
+  .intro-text h1 {
+    font-size: 31px;
+  }
+  .intro-text p {
+    font-size: 20px;
+  }
+  .cta {
+    padding: 30px 0px 0px 0px;
+    align-items: center;
+  }
+  .cta-book {
+    margin: 20px 0px 0px 0px;
+  }
 
-@media screen and (max-width: 1024px) {
-    .logo {
-        font-size: 10px;
-    }
-    .nav-link {
-        font-size: 8px;
-    }
-    .socmed-links img{
-        height: 24px;
-    }
-    .presentation {
-        flex-direction: column;
-        align-items: center;
-    }
-    .introduction {
-        margin-top: 2vh;
-        text-align: center;
-        align-items: center;
-        height: 20vh;
-    }
-    .intro-text h1 {
-        font-size: 25px;
-    }
-    .intro-text p {
-        font-size: 20px;
-    }
-    .cta {
-        padding: 30px 0px 0px 0px;
-        align-items: center;
-    }
-    .slide-container {
-        flex: 1;
-        height: 100%;
-        align-items: center;
-        padding: none;
-    }
-    .slides {
-        height: 80%;
-        padding-top: 30px;
-    }
+  .slide-container {
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    padding-top: 2vh;
+  }
+  .slides {
+    height: 80%;
+    padding-top: 30px;
+  }
+
+  /*GALLERY ALBUMS*/
+  .gallery-text {
+    padding-top: 15px;
+    font-size: 25px;
+    padding: 25px;
+  }
+
+  .gallery h1 {
+    font-size: 29px;
+  }
+
+  /* BOOK SECTION */
+  .book-section h1 {
+    font-size: 29px;
+  }
+  .book_form-section {
+    flex-direction: column;
+  }
+
+  form input,
+  form textarea {
+    margin: 8px auto;
+  }
+
+  form input,
+  form label,
+  form textarea {
+    font-size: 12px;
+  }
+
+  .date-input input {
+    width: 30%;
+    min-width: 55%;
+  }
+
+  .book-text {
+    padding: 20px 0px 20px 0px;
+    font-size: 15px;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 10px;
+    min-height: 6vh;
+    margin: 2px 0px 1px 0px;
+  }
 }
